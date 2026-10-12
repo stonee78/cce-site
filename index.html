@@ -71,6 +71,12 @@ footer{margin-top:56px;background:var(--navy-950);color:#b8c6f0;padding:26px 0 4
 footer p{margin:0 0 6px}
 footer a{color:var(--gold-hi)}
 footer strong{color:#fff}
+/* Pip appears on the orb on hover (CSS only; decorative) */
+.orb{transition:box-shadow .45s ease}
+.orbwrap .badge{position:absolute;inset:14%;width:72%;height:72%;border-radius:50%;opacity:0;transform:scale(.7) rotate(-14deg);transition:opacity .45s ease,transform .45s ease;pointer-events:none}
+.orbwrap:hover .badge{opacity:1;transform:scale(1) rotate(0)}
+.orbwrap:hover .orb{box-shadow:inset -16px -22px 34px rgba(110,55,0,.5),inset 10px 12px 20px rgba(255,255,255,.55),0 30px 46px rgba(0,0,0,.45),0 0 100px rgba(255,185,19,.6)}
+@media (prefers-reduced-motion:reduce){.orb,.orbwrap .badge{transition:none}}
 @media (max-width:820px){.hero{grid-template-columns:1fr;padding-block:52px 120px}.orbwrap{order:-1;width:min(210px,55vw);margin-bottom:6px}.grid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:no-preference){.orbwrap{animation:float 7s ease-in-out infinite}@keyframes float{50%{transform:translateY(-8px)}}}
 </style>
@@ -116,6 +122,7 @@ footer strong{color:#fff}
 <div class="orbwrap" aria-hidden="true">
 <svg viewBox="0 0 400 400"><g fill="none" stroke="#86a8ff" stroke-width="2" stroke-linecap="round" opacity=".85"><path d="M60 250A150 150 0 0 1 120 80L150 60"/><path d="M340 150A150 150 0 0 1 280 320L250 342"/><path d="M45 190A165 165 0 0 1 90 100"/><path d="M355 215A165 165 0 0 1 310 305"/></g><g fill="#ffb913"><circle cx="150" cy="60" r="7"/><circle cx="250" cy="342" r="7"/><circle cx="90" cy="100" r="5"/><circle cx="310" cy="305" r="5"/></g></svg>
 <div class="orb"></div>
+<img class="badge" src="/pip-badge.png" alt="" width="456" height="456">
 </div>
 </div>
 </header>
