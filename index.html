@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corpus Christi Entrepreneurs</title>
+<meta name="description" content="A welcoming community for entrepreneurs and small business owners in Corpus Christi and the Coastal Bend. Join the Facebook Group.">
+<link rel="canonical" href="https://corpuschristientrepreneurs.org/">
+<style>
+/* Layout: dark circuit-board hero with a glossy gold orb, then crisp cream panels. Palette taken from the navy Pip icon. */
+:root{
+  --navy-950:#050f3a;--navy-900:#08205f;--navy-700:#1b3f9e;--navy-500:#2d56c7;
+  --sky:#86a8ff;--gold:#ffb913;--gold-hi:#ffe27a;--gold-deep:#c77d00;
+  --cream:#f6f3e8;--paper:#fffefa;--ink:#0b1638;--soft:#3d4a73;--line:#d5dcef;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:18px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+/* hero */
+header{position:relative;overflow:hidden;color:#fff;background:
+  radial-gradient(900px 480px at 78% 30%,rgba(110,150,255,.24),transparent 60%),
+  linear-gradient(160deg,var(--navy-700) 0%,var(--navy-900) 55%,var(--navy-950) 100%)}
+header svg.circuit{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+.hero{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center;padding-block:76px 150px}
+.kicker{display:inline-block;margin:0 0 14px;padding:5px 12px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-hi);border:1px solid rgba(255,226,122,.45);border-radius:3px;background:rgba(5,15,58,.5)}
+h1{margin:0 0 16px;font-size:clamp(36px,6.4vw,64px);line-height:1.06;font-weight:800;letter-spacing:-.02em;text-wrap:balance;text-shadow:0 2px 0 rgba(0,0,0,.18)}
+h1 span{color:var(--gold-hi)}
+.lead{margin:0 0 30px;font-size:clamp(18px,2.4vw,22px);max-width:30em;color:#e1e8ff}
+.btn{display:inline-block;padding:15px 30px;font-weight:800;font-size:18px;text-decoration:none;color:#3a2400;border-radius:4px;
+  background:linear-gradient(180deg,var(--gold-hi) 0%,var(--gold) 48%,var(--gold-deep) 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 -3px 0 rgba(120,60,0,.35),0 10px 24px rgba(0,0,0,.35),0 0 28px rgba(255,185,19,.35);
+  transition:transform .15s,box-shadow .15s}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -3px 0 rgba(120,60,0,.35),0 14px 28px rgba(0,0,0,.4),0 0 38px rgba(255,185,19,.55)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.sub{margin:14px 0 0;font-size:15px;color:#b8c6f0}
+header svg.skyline{position:absolute;left:0;bottom:0;width:100%;height:clamp(90px,14vw,170px);pointer-events:none}
+/* orb */
+.orbwrap{position:relative;justify-self:center;width:min(300px,70vw);aspect-ratio:1}
+.orbwrap svg{position:absolute;inset:-14%;width:128%;height:128%}
+.orb{position:absolute;inset:14%;border-radius:50%;
+  background:radial-gradient(circle at 33% 27%,#fffbe0 0 5%,var(--gold-hi) 16%,var(--gold) 46%,var(--gold-deep) 82%,#8a4d00 100%);
+  box-shadow:inset -16px -22px 34px rgba(110,55,0,.5),inset 10px 12px 20px rgba(255,255,255,.55),0 30px 46px rgba(0,0,0,.45),0 0 70px rgba(255,185,19,.35)}
+.orb::after{content:"";position:absolute;left:17%;top:11%;width:42%;height:26%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,0));transform:rotate(-24deg);filter:blur(1px)}
+/* panels */
+main{padding:56px 0 8px}
+.intro{max-width:34em;margin:0 0 30px}
+.intro h2{margin:0 0 6px;font-size:clamp(26px,4vw,34px);line-height:1.15;letter-spacing:-.01em}
+.intro p{margin:0;color:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.panel{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:26px 24px 24px;box-shadow:0 1px 0 #fff inset,0 10px 22px rgba(6,22,79,.08)}
+.panel svg{display:block;width:100%;height:14px;margin:0 0 16px}
+.panel h3{margin:0 0 8px;font-size:21px;line-height:1.25;color:var(--navy-900)}
+.panel p,.panel li{margin:0;color:var(--soft);font-size:17px}
+.panel ul{margin:0;padding-left:20px}
+.cta{margin:26px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:16px;background:linear-gradient(160deg,var(--navy-700),var(--navy-900));color:#fff;border-radius:6px;padding:28px;box-shadow:0 14px 30px rgba(6,22,79,.25)}
+.cta p{margin:0;flex:1 1 280px;font-size:20px;line-height:1.4}
+footer{margin-top:56px;background:var(--navy-950);color:#b8c6f0;padding:26px 0 40px;font-size:15px}
+footer p{margin:0 0 6px}
+footer strong{color:#fff}
+@media (max-width:820px){.hero{grid-template-columns:1fr;padding-block:52px 120px}.orbwrap{order:-1;width:min(210px,55vw);margin-bottom:6px}.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){.orbwrap{animation:float 7s ease-in-out infinite}@keyframes float{50%{transform:translateY(-8px)}}}
+</style>
+</head>
+<body>
+<header>
+<svg class="circuit" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<g fill="none" stroke="#86a8ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".6">
+<path d="M0 90H210L250 130H430"/><path d="M0 170H120L170 220H340L380 260H560"/><path d="M0 300H90L130 340H260"/><path d="M0 430H180L230 480H470"/>
+<path d="M1200 70H1010L970 110H800"/><path d="M1200 200H1090L1050 240H900L860 200H740"/><path d="M1200 340H1060L1010 390H830"/><path d="M1200 470H980L930 520H760"/>
+<path d="M300 0V60L340 100"/><path d="M620 560V500L580 460"/><path d="M900 0V50L940 90"/>
+</g>
+<g fill="#ffb913"><circle cx="430" cy="130" r="5"/><circle cx="560" cy="260" r="5"/><circle cx="260" cy="340" r="4"/><circle cx="470" cy="480" r="5"/><circle cx="800" cy="110" r="5"/><circle cx="740" cy="200" r="4"/><circle cx="830" cy="390" r="5"/><circle cx="760" cy="520" r="5"/><circle cx="340" cy="100" r="4"/><circle cx="580" cy="460" r="4"/><circle cx="940" cy="90" r="4"/><circle cx="170" cy="220" r="3.5"/><circle cx="1010" cy="390" r="3.5"/></g>
+</svg>
+<svg class="skyline" viewBox="0 0 1200 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<defs><linearGradient id="glow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb913" stop-opacity="0"/><stop offset="1" stop-color="#ffb913" stop-opacity=".42"/></linearGradient></defs>
+<rect y="60" width="1200" height="110" fill="url(#glow)"/>
+<g fill="#2a4fb8" opacity=".5"><path d="M0 170V120H60V100H110V126H170V104H230V170Z"/><path d="M250 170V96H290V78H330V110H380V170Z"/><path d="M410 170V84H440V58H470V92H520V170Z"/><path d="M560 170V100H610V70H650V104H700V170Z"/><path d="M740 170V92H780V66H820V96H880V170Z"/><path d="M900 170V108H950V86H1000V112H1060V170Z"/><path d="M1080 170V100H1130V80H1200V170Z"/></g>
+<g fill="#050f3a">
+<path d="M0 170V150H40V136H70V150H110V128H138V150H190V140H230V150H280V170Z"/>
+<path d="M300 170V120L312 112V170Z"/><path d="M318 170V96L330 88V170Z"/>
+<path d="M360 170V132H392V118H420V170Z"/>
+<path d="M450 170V70L474 40L498 70V170Z"/>
+<path d="M520 170V104H552V84H586V104H610V170Z"/>
+<path d="M640 170V90H664V60H688V90H712V170Z"/>
+<path d="M730 170V110H760V98H790V170Z"/>
+<path d="M820 170V74H838V52H856V74H874V170Z"/>
+<path d="M890 170V126H930V112H966V170Z"/>
+<path d="M990 170V136H1030V122H1070V148H1120V138H1160V170Z"/>
+<path d="M1160 170V150H1200V170Z"/>
+</g>
+<g fill="none" stroke="#050f3a" stroke-width="3"><path d="M20 150C120 70 230 70 330 150"/></g>
+<g fill="#ffd45a" opacity=".95"><circle cx="500" cy="118" r="1.8"/><circle cx="530" cy="126" r="1.8"/><circle cx="660" cy="90" r="1.8"/><circle cx="690" cy="118" r="1.8"/><circle cx="845" cy="78" r="1.8"/><circle cx="866" cy="112" r="1.8"/><circle cx="1010" cy="146" r="1.8"/><circle cx="1090" cy="150" r="1.8"/><circle cx="120" cy="146" r="1.8"/><circle cx="215" cy="152" r="1.8"/><circle cx="474" cy="52" r="2.5"/><circle cx="676" cy="72" r="2"/><circle cx="847" cy="62" r="2"/><circle cx="640" cy="120" r="1.6"/><circle cx="560" cy="120" r="1.6"/><circle cx="580" cy="136" r="1.6"/><circle cx="850" cy="100" r="1.6"/><circle cx="470" cy="100" r="1.6"/><circle cx="700" cy="108" r="1.6"/><circle cx="936" cy="136" r="1.6"/><circle cx="400" cy="144" r="1.6"/><circle cx="755" cy="128" r="1.6"/></g>
+</svg>
+<div class="wrap hero">
+<div>
+<p class="kicker">Corpus Christi, Texas</p>
+<h1>Where Coastal Bend <span>entrepreneurs</span> connect</h1>
+<p class="lead">A friendly community for small business owners, side hustlers and first-time founders. Ask questions, share what is working, and learn from people building something nearby.</p>
+<a class="btn" href="https://www.facebook.com/groups/127256700650900">Join the Facebook Group</a>
+<p class="sub">Free to join. Everyone with a business idea is welcome.</p>
+</div>
+<div class="orbwrap" aria-hidden="true">
+<svg viewBox="0 0 400 400"><g fill="none" stroke="#86a8ff" stroke-width="2" stroke-linecap="round" opacity=".85"><path d="M60 250A150 150 0 0 1 120 80L150 60"/><path d="M340 150A150 150 0 0 1 280 320L250 342"/><path d="M45 190A165 165 0 0 1 90 100"/><path d="M355 215A165 165 0 0 1 310 305"/></g><g fill="#ffb913"><circle cx="150" cy="60" r="7"/><circle cx="250" cy="342" r="7"/><circle cx="90" cy="100" r="5"/><circle cx="310" cy="305" r="5"/></g></svg>
+<div class="orb"></div>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<div class="intro">
+<h2>Good ideas grow faster with company</h2>
+<p>Since 2010 this Group has brought Corpus Christi and Coastal Bend business builders together, and it now has more than 5,000 members.</p>
+</div>
+<div class="grid">
+<section class="panel">
+<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7H150L158 3H192" fill="none" stroke="#2d56c7" stroke-width="1.6"/><circle cx="195" cy="3" r="3" fill="#ffb913"/></svg>
+<h3>What this is</h3>
+<p>A public Facebook Group that fosters growth within the entrepreneur community in Corpus Christi and surrounding areas.</p>
+</section>
+<section class="panel">
+<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7H150L158 3H192" fill="none" stroke="#2d56c7" stroke-width="1.6"/><circle cx="195" cy="3" r="3" fill="#ffb913"/></svg>
+<h3>Who it is for</h3>
+<ul><li>Owners of small and local businesses</li><li>People starting a side business or a first company</li><li>Freelancers, makers and curious beginners</li></ul>
+</section>
+<section class="panel">
+<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7H150L158 3H192" fill="none" stroke="#2d56c7" stroke-width="1.6"/><circle cx="195" cy="3" r="3" fill="#ffb913"/></svg>
+<h3>How to take part</h3>
+<p>Everything happens in the Group. Ask to join, say hello, and tell us what you are building.</p>
+</section>
+</div>
+<div class="cta">
+<p>Come say hello. Someone in the Group has probably faced your question before.</p>
+<a class="btn" href="https://www.facebook.com/groups/127256700650900">Join the Group</a>
+</div>
+</div>
+</main>
+<footer>
+<div class="wrap">
+<p><strong>Corpus Christi Entrepreneurs</strong> was started and is run by Jesus E. Lopez, owner.</p>
+<p>This website collects no personal information.</p>
+</div>
+</footer>
+</body>
+</html>
