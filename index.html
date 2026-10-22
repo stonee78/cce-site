@@ -96,12 +96,14 @@ footer strong{color:#fff}
 @media (max-width:820px){.hero{grid-template-columns:1fr;padding-block:52px 120px}.orbwrap{order:-1;width:min(210px,55vw);margin-bottom:6px}.grid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:no-preference){.orbwrap{animation:float 7s ease-in-out infinite}@keyframes float{50%{transform:translateY(-8px)}}}
 </style>
+<link rel="stylesheet" href="/nav.css">
 </head>
 <body>
+<nav class="railnav" aria-label="Site pages"><ul><li><a href="/" aria-current="page"><span class="label">Home</span><span class="pad"></span></a></li><li><a href="/pip/"><span class="label">Meet Pip</span><span class="pad"></span></a></li><li><a href="/blog/"><span class="label">Blog</span><span class="pad"></span></a></li><li><a href="/faq/"><span class="label">FAQ</span><span class="pad"></span></a></li><li><a href="/privacy/"><span class="label">Privacy</span><span class="pad"></span></a></li></ul></nav>
 <header>
 <svg class="circuit" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
 <g fill="none" stroke="#86a8ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".6">
-<path d="M0 90H210L250 130H430"/><path d="M0 170H120L170 220H340L380 260H560"/><path d="M0 300H90L130 340H260"/><path d="M0 430H180L230 480H470"/>
+<path d="M0 90H210L250 130H430"/><path d="M0 170H120L170 220H340L380 260H560"/><path id="tapline" d="M0 300H90L130 340H260"/><path d="M0 430H180L230 480H470"/>
 <path d="M1200 70H1010L970 110H800"/><path d="M1200 200H1090L1050 240H900L860 200H740"/><path d="M1200 340H1060L1010 390H830"/><path d="M1200 470H980L930 520H760"/>
 <path d="M300 0V60L340 100"/><path d="M620 560V500L580 460"/><path d="M900 0V50L940 90"/>
 </g>
@@ -192,5 +194,14 @@ footer strong{color:#fff}
 <p>This website collects no personal information.</p>
 </div>
 </footer>
+<script>
+/* Runs the side rail's trace down to the hero circuit line at the left edge, while that line sits below the cap. */
+(()=>{const nav=document.querySelector('.railnav'),line=document.getElementById('tapline');if(!nav||!line)return;
+const ul=nav.querySelector('ul');
+function fit(){const n=nav.getBoundingClientRect(),capBottom=ul.getBoundingClientRect().bottom+22;
+const y=new DOMPoint(0,300).matrixTransform(line.ownerSVGElement.getScreenCTM()).y,gap=y-capBottom;
+if(gap>0){nav.style.setProperty('--tap-top',(capBottom-n.top)+'px');nav.style.setProperty('--tap',gap+'px');nav.classList.add('tapped')}else nav.classList.remove('tapped')}
+addEventListener('scroll',fit,{passive:true});addEventListener('resize',fit);fit()})();
+</script>
 </body>
 </html>
