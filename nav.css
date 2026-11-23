@@ -34,3 +34,8 @@ header{position:relative;overflow:hidden}
 /* Keep page content clear of the rail on mid-size screens, where the content would otherwise start under it. */
 @media (min-width:701px) and (max-width:803px){.wrap{padding-left:52px}}
 @media (min-width:701px) and (max-width:1083px){body:has(svg.circuit) .wrap{padding-left:52px}}
+/* Language switch, top right of every page: English | Español. Sits on the dark header. */
+.langswitch{position:absolute;top:10px;right:18px;z-index:60;font:700 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;letter-spacing:.06em;color:#86a8ff}
+.langswitch a{color:#ffe27a;text-decoration:none;padding:4px 2px}
+.langswitch a:hover,.langswitch a:focus-visible{text-decoration:underline}
+.langswitch a[aria-current]{color:#fff;text-decoration:underline;text-underline-offset:3px}
